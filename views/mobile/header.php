@@ -29,7 +29,7 @@ $(function() {
 if ($show_map === TRUE) {
 	echo " onload=\"initialize()\"";
 }
-?>
+?>>
 	<div id="container">
 		<div id="navigation">
 			<h1><a href="<?php echo url::site()."mobile"; ?>"><?php echo $site_name; ?></a></h1>
