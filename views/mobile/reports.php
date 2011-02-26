@@ -13,6 +13,7 @@
 		}
 		?>
 		<div class="other filter">
+<?php if (!empty($filter)) { ?>
 			<form action=<?php echo url::site() . '/mobile/reports/search' ?> method="get" accept-charset="utf-8">
 				<div><label for="town">Your town</label>
 				<input type="text" name="town" value="<?php echo isset($_GET['town']) ? $_GET['town'] : ''; ?>"></div>
@@ -67,6 +68,7 @@
 				</select></div>
 				<input type="submit" value="Search &rarr;">
 			</form>
+<?php } ?>
 		</div>
 		<div class="list">
 			<ul>
