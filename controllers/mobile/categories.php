@@ -72,6 +72,9 @@ class Categories_Controller extends Mobile_Controller {
 			}
         }
         $this->template->content->categories = $parent_categories;
+		
+		// Force Home breadcrumb
+		$this->template->header->breadcrumbs = " ";
 
 		// Get pages
 		$this->template->content->pages = ORM::factory('page')->where('page_active', '1')->find_all();

@@ -74,6 +74,9 @@ class Reports_Controller extends Mobile_Controller {
 		
 		$this->template->content = new View('mobile/reports');
 		
+		// Force Home breadcrumb
+		$this->template->header->breadcrumbs = " ";
+		
 		$db = new Database;
 		
 		$town = isset($_GET['town']) ? $_GET['town'] : '';
@@ -177,6 +180,8 @@ class Reports_Controller extends Mobile_Controller {
 		$this->template->header->show_map = TRUE;
 		$this->template->header->js = new View('mobile/reports_view_js');
 		$this->template->content = new View('mobile/reports_view');
+		
+		$this->template->header->breadcrumbs = " ";
 		
 		if ( ! $id )
 		{
