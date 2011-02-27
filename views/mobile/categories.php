@@ -1,35 +1,3 @@
-<div class="block">
-	<h2 class="expand">Recent Reports</h2>
-	<div class="collapse">
-		<ul>
-			<?php
-			foreach ($incidents as $incident)
-			{
-				$incident_date = $incident->incident_date;
-				$incident_date = date('H:i M d', strtotime($incident->incident_date));
-				echo "<li><strong><a href=\"".url::site()."mobile/reports/view/".$incident->id."\">".$incident->incident_title."</a></strong>";
-				echo "&nbsp;&nbsp;<i>$incident_date</i></li>";
-			}
-			?>
-		</ul>
-	</div>
-</div>
-<div class="block">
-	<h2 class="expand">Related News</h2>
-	<div class="collapse">
-		<ul>
-			<?php
-			foreach ($feeds as $feed)
-			{
-				$feed_date = date('H:i M d', strtotime($feed->item_date));
-				echo "<li><strong><a href=\"".$feed->item_link."\">".$feed->item_title."</a></strong>";
-				//echo "&nbsp;&nbsp;<i>$incident_date</i></li>";
-				echo "</li>";
-			}
-		?>
-		</ul>
-	</div>
-</div>
 <h2 class="block_title">Reports By Category</h2>
 <div class="block">
   <?php

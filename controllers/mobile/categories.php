@@ -31,14 +31,6 @@ class Categories_Controller extends Mobile_Controller {
 	{
 		$this->template->content = new View('mobile/categories');
 		
-		// Get 10 Most Recent Reports
-		$this->template->content->incidents = ORM::factory('incident')
-            ->where('incident_active', '1')
-			->limit('10')
-            ->orderby('incident_date', 'desc')
-			->with('location')
-            ->find_all();
-		
 		// Get all active top level categories
         $parent_categories = array();
         foreach (ORM::factory('category')
@@ -80,12 +72,6 @@ class Categories_Controller extends Mobile_Controller {
 			}
         }
         $this->template->content->categories = $parent_categories;
-
-		// Get RSS News Feeds
-		$this->template->content->feeds = ORM::factory('feed_item')
-			->limit('10')
-            ->orderby('item_date', 'desc')
-            ->find_all();
 
 		// Get pages
 		$this->template->content->pages = ORM::factory('page')->where('page_active', '1')->find_all();

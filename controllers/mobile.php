@@ -60,6 +60,19 @@ class Mobile_Controller extends Template_Controller {
 	public function index()
 	{
 		$this->template->content  = new View('mobile/main');
+		// Get 10 Most Recent Reports
+		$this->template->content->incidents = ORM::factory('incident')
+            ->where('incident_active', '1')
+			->limit('10')
+            ->orderby('incident_date', 'desc')
+			->with('location')
+            ->find_all();
+		// Get RSS News Feeds
+		$this->template->content->feeds = ORM::factory('feed_item')
+			->limit('10')
+            ->orderby('item_date', 'desc')
+            ->find_all();
+
 	}
 	
 	private function _category_count($category_id = false)
