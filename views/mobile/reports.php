@@ -88,9 +88,10 @@
 						echo '<li><span class="verified ';
 						if ($incident->incident_verified == 1)
 						{
-							echo "verified_yes";
+							echo 'verified_yes">Verified</span>';
+						} else {
+							echo '">Unverified</span>';
 						}
-						echo '">Verified</span>';
 						echo "<strong><a href=\"".url::site()."mobile/reports/view/".$incident->id."?c=".$category_id."&p=".$page_no."\">".$incident->incident_title."</a></strong>";
 						echo "&nbsp;&nbsp;<i>$incident_date";
 						if(isset($lastupdated)) {
