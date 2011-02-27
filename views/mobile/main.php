@@ -7,7 +7,7 @@
 		<?php
 			echo '<form action="'.url::site().'mobile/reports/search" method="get">';
 		?>
-			<label for="town">Your Town</label>
+			<label for="town">Your Area</label>
 				<input type="text" name="town" value="">
 				<input type="submit" value="Search &rarr;">
   		</form>
