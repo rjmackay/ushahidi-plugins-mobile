@@ -15,5 +15,5 @@
 	</div>
 </div>
 <div class="block">
-	<h2 class="other"><a href="<?php echo url::site()."mobile/categories/" ?>">Or search by category</a></h2>
+	<h2 class="other"><a href="<?php echo url::site()."mobile/categories/" ?>">Or browse by category</a></h2>
 </div>
