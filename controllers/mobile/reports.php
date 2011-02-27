@@ -151,7 +151,7 @@ class Reports_Controller extends Mobile_Controller {
 				 OFFSET {$pagination->sql_offset}"
 		);
 
-		$this->template->content->filter = false;
+		$this->template->content->filter = true;
 		$this->template->content->have_results = true;
 		$this->template->content->town = $town;
 		$this->template->content->incidents = $incidents;
