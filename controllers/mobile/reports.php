@@ -101,7 +101,10 @@ class Reports_Controller extends Mobile_Controller {
 		// if we don't get location there will be no results rendered
 		if (!$location) {
 			$this->template->content->have_results = false;
+			$this->template->content->filter = true;
+			$this->template->content->town = $town;
 			$this->template->content->category = 0;
+			$this->template->content->categories = array();
 			return;
 		}
 

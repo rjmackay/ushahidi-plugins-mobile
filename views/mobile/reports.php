@@ -16,7 +16,7 @@
 <?php if (!empty($filter)) { ?>
 			<form action=<?php echo url::site() . '/mobile/reports/search' ?> method="get" accept-charset="utf-8">
 				<div><label for="town">Your Area</label>
-				<input type="text" name="town" value="<?php echo isset($_GET['town']) ? $_GET['town'] : ''; ?>"></div>
+				<input type="text" name="town" value="<?php echo $town ?>"></div>
 				
 				<div><label for="distance">Distance</label>
 				<select name="distance" id="distance">
