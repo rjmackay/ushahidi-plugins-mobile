@@ -155,11 +155,17 @@ div#page{
 		margin-left: 10px;
 		display:block;
 		float:left;
-		width:80px;
+		width:65px;
+		margin-top:5px;
+		font-size: 14px;
 	}
 	.report_list .filter .searchbtn{
-		margin-left: 90px;
-		margin-top: 5px;
+		margin:1px 0 0 10px;
+		float:right;
+	}
+	.report_list .filter .catlist{
+		width:220px;
+		margin-left:2px;
 	}
 
 /* Report View Page */

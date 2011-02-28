@@ -31,7 +31,7 @@
 					?>
 				</select></div>
 				<div><label for="category">Category</label>
-				<select name="category_id" id="category_id">
+				<select class="catlist" name="category_id" id="category_id">
 					<?php 
 						$selected_category = isset($_GET['category_id']) ? $_GET['category_id'] : '0';
 						
@@ -66,8 +66,9 @@
 						echo '>' . $option . '</option>';
 					}
 					?>
-				</select></div>
+				</select>
 				<input class="searchbtn" type="submit" value="Search &rarr;">
+				</div>
 			</form>
 <?php } ?>
 		</div>
