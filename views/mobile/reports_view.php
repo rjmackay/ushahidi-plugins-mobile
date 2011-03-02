@@ -1,21 +1,12 @@
 <div class="report_info">
 	<div class="verified <?php
-	if ($incident->incident_verified == 1)
-	{
-		echo "verified_yes";
-	}
-	?>">
-	Verified
-	<br /><?php
-	if ($incident->incident_verified == 1)
-	{
-		echo "<span>YES</span>";
-	}
-	else
-	{
-		echo "<span>NO</span>";
-	}
-	?></div>
+    if ($incident->incident_verified == 1)
+    {
+        echo 'verified_yes">Verified</div>';
+    } else {
+        echo '">Unverified</div>';
+    }
+    ?>
 	<h2><?php echo $incident->incident_title; ?></h2>
 	<ul class="details">
 		<li>
