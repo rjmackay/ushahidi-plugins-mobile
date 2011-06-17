@@ -98,6 +98,7 @@ class Reports_Controller extends Mobile_Controller {
 		if (!$location) {
 			$this->template->content->have_results = false;
 			$this->template->content->category = 0;
+			$this->template->content->categories = array(); // or null
 			return;
 		}
 
