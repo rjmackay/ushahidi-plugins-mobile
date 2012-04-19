@@ -95,7 +95,12 @@ class Reports_Controller extends Mobile_Controller {
 		}
 
 		if (!empty($town)) {
-			$location = mobile_geocoder::geocode($town . ',New Zealand');
+			$location = $town;
+			if ( ! Kohana::config('settings.multi_country') && $country = ORM::factory('country', Kohana::config('settings.default_country'))->country)
+			{
+				$location .= ', '.$country;
+			}
+			$location = mobile_geocoder::geocode($location);
 		}
 
 		// if we don't get location there will be no results rendered
