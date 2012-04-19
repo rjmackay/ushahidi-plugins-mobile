@@ -23,21 +23,21 @@ class Mobile_Controller extends Template_Controller {
 	public $is_cachable = TRUE;
 	
 	// Main template
-    public $template = 'mobile/layout';
+	public $template = 'mobile/layout';
 
 	// Table Prefix
 	protected $table_prefix;
 
-    public function __construct()
-    {
+	public function __construct()
+	{
 		parent::__construct();
 		
 		// Set Table Prefix
 		$this->table_prefix = Kohana::config('database.default.table_prefix');
 		
 		// Load Header & Footer
-        $this->template->header  = new View('mobile/header');
-        $this->template->footer  = new View('mobile/footer');
+		$this->template->header  = new View('mobile/header');
+		$this->template->footer  = new View('mobile/footer');
 
 		$this->template->header->site_name = Kohana::config('settings.site_name');
 		$this->template->header->site_tagline = Kohana::config('settings.site_tagline');
@@ -62,16 +62,16 @@ class Mobile_Controller extends Template_Controller {
 		$this->template->content  = new View('mobile/main');
 		// Get 10 Most Recent Reports
 		$this->template->content->incidents = ORM::factory('incident')
-            ->where('incident_active', '1')
+			->where('incident_active', '1')
 			->limit('10')
-            ->orderby('incident_date', 'desc')
+			->orderby('incident_date', 'desc')
 			->with('location')
-            ->find_all();
+			->find_all();
 		// Get RSS News Feeds
 		$this->template->content->feeds = ORM::factory('feed_item')
 			->limit('10')
-            ->orderby('item_date', 'desc')
-            ->find_all();
+			->orderby('item_date', 'desc')
+			->find_all();
 
 	}
 	
