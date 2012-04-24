@@ -7,6 +7,8 @@
 <?php
 echo plugin::render('stylesheet');
 echo html::script("http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js");
+echo html::script("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js");
+echo html::stylesheet("http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css");
 echo plugin::render('javascript');
 
 if ($show_map === TRUE)

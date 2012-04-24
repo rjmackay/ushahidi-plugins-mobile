@@ -25,3 +25,19 @@ $(function() {
         unique: false
 	});
 });
+	
+function formSwitch(form_id, incident_id)
+{
+	var answer = confirm('<?php echo Kohana::lang('ui_admin.are_you_sure_you_want_to_switch_forms'); ?>?');
+	if (answer){
+		$('#form_loader').html('<img src="<?php echo url::file_loc('img')."media/img/loading_g.gif"; ?>">');
+		$.post("<?php echo url::site().'reports/switch_form'; ?>", { form_id: form_id, incident_id: incident_id },
+			function(data){
+				if (data.status == 'success'){
+					$('#custom_forms').html('');
+					$('#custom_forms').html(decodeURIComponent(data.response));
+					$('#form_loader').html('');
+				}
+		  	}, "json");
+	}
+}

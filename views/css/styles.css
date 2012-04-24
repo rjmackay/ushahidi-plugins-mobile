@@ -249,7 +249,8 @@ div#page{
 			.report_form .report_row .text {
 				
 			}
-			.report_form .report_row .long{
+			.report_form .report_row .long,
+			.report_form .report_row .custom_text {
 				width:97%;
 			}
 			.report_form .report_row .date-time{
