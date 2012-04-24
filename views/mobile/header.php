@@ -6,6 +6,7 @@
 <title><?php echo $site_name; ?></title>
 <?php
 echo plugin::render('stylesheet');
+echo html::script("http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js");
 echo plugin::render('javascript');
 
 if ($show_map === TRUE)

@@ -42,7 +42,6 @@ class Mobile_Controller extends Template_Controller {
 		$this->template->header->site_name = Kohana::config('settings.site_name');
 		$this->template->header->site_tagline = Kohana::config('settings.site_tagline');
 
-		plugin::add_javascript('mobile/views/js/jquery');
 		plugin::add_javascript('mobile/views/js/jquery.treeview');
 		plugin::add_javascript('mobile/views/js/expand');
 		plugin::add_stylesheet('mobile/views/css/styles');
