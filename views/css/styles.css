@@ -286,6 +286,12 @@ div#page{
 				margin:5px 0;
 				font-weight:bold;
 			}
+			.report_form .report_row #incident_source{
+				width: 30%;
+			}
+			.report_form .report_row #incident_information{
+				width: 30%;
+			}
 	
 #map_canvas{
 	width:100%;
