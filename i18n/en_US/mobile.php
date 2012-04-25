@@ -2,8 +2,8 @@
 
 $lang = array
 (
-	'mobile_version' => 'Mobile version',
-	'switch_to_mobile_version' => 'Switch to Mobile Version',
+	'mobile_version' => 'Low Bandwidth Version',
+	'switch_to_mobile_version' => 'Switch to Low Bandwidth Version',
 	'your_area' => 'Your Area',
 	'distance' => 'Distance',
 	'order_by' => 'Order By',
