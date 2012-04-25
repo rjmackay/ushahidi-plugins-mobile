@@ -50,6 +50,9 @@ class mobile {
 				url::redirect(url::base()."mobile");
 			}
 		}
+
+		Event::add('ushahidi_action.nav_main_bottom', array($this, '_add_mobile_tab_bottom'));	 //adds the mobile tab
+		Event::add('ushahidi_action.header_nav', array($this, '_add_mobile_tab_header'));	 //adds the mobile tab
 	}
 
 	/**
@@ -87,6 +90,16 @@ class mobile {
 		{
 			return true;
 		}
+	}
+
+	public function _add_mobile_tab_bottom()
+	{
+		echo "<li><a href=\"". url::site()."mobile\">". Kohana::lang('mobile.mobile_version') ."</a></li>";
+	}
+
+	public function _add_mobile_tab_header()
+	{
+		echo "<li><a href=\"". url::site()."mobile\">". Kohana::lang('mobile.switch_to_mobile_version') ."</a></li>";
 	}
 
 }
