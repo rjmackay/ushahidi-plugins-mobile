@@ -35,6 +35,8 @@ class Mobile_Controller extends Template_Controller {
 		// Set Table Prefix
 		$this->table_prefix = Kohana::config('database.default.table_prefix');
 		
+		$this->themes = new Themes();
+		
 		// Load Header & Footer
 		$this->template->header  = new View('mobile/header');
 		$this->template->footer  = new View('mobile/footer');
@@ -50,6 +52,10 @@ class Mobile_Controller extends Template_Controller {
 		$this->template->header->show_map = FALSE;
 		$this->template->header->js = "";
 		$this->template->header->breadcrumbs = "";
+		
+		// Do language switching
+		$this->languages = $this->themes->languages();
+		$this->template->footer->languages = $this->languages;
 		
 		// Google Analytics
 		$google_analytics = Kohana::config('settings.google_analytics');
