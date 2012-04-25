@@ -5,6 +5,6 @@
 </div>
 <div class="block">
 	<div class="other">
-		<a href="<?php echo url::site()."mobile/" ?>">Back to the homepage</a></h2>
+		<a href="<?php echo url::site()."mobile/" ?>"><?php echo Kohana::lang('mobile.back_to_homepage');?></a></h2>
 	</div>
 </div>

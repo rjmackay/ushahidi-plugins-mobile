@@ -2,21 +2,21 @@
 	<div class="verified <?php
     if ($incident->incident_verified == 1)
     {
-        echo 'verified_yes">Verified</div>';
+        echo 'verified_yes">'.Kohana::lang('ui_main.verified').'</div>';
     } else {
-        echo '">Unverified</div>';
+        echo '">'.Kohana::lang('ui_main.unverified').'</div>';
     }
     ?>
 	<h2><?php echo $incident->incident_title; ?></h2>
 	<ul class="details">
 		<li>
-			<small>Date</small>: 
+			<small><?php echo Kohana::lang('ui_main.date'); ?></small>: 
 			<?php echo date('M j Y', strtotime($incident->incident_date)); ?>
-			<small>Time</small>: 
+			<small><?php echo Kohana::lang('ui_main.time'); ?></small>: 
 			<?php echo date('H:i', strtotime($incident->incident_date)); ?>
 		</li>		
 		<li>
-			<small>Description</small>: <br />
+			<small><?php echo Kohana::lang('ui_main.description'); ?></small>: <br />
 			<?php echo $incident->incident_description; ?>
 		</li>
 	</ul>

@@ -52,7 +52,7 @@ print (!$error_description) ? '' : "<li>" . $error_description . "</li>";
 		</div>
 		
 		<div class="report_row">
-			<h4>Location Name <span class="required">*</span>
+			<h4><?php echo Kohana::lang('mobile.location_name');?> <span class="required">*</span>
 			<br />
 			<span class="example"><?php echo Kohana::lang('ui_main.detailed_location_example');?></span></h4>
 			<?php print form::input('location_name', $form['location_name'], ' class="text long"');?>

@@ -1,4 +1,4 @@
-<h2 class="block_title">Reports By Category</h2>
+<h2 class="block_title"><?php echo Kohana::lang('mobile.reports_by_category'); ?></h2>
 <div class="block">
   <?php
   foreach ($categories as $category => $category_info)

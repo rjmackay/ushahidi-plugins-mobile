@@ -15,10 +15,10 @@
 		<div class="other filter">
 <?php if (!empty($filter)) { ?>
 			<form action=<?php echo url::site() . '/mobile/reports/search' ?> method="get" accept-charset="utf-8">
-				<div><label for="town">Your Area</label>
+				<div><label for="town"><?php echo Kohana::lang('mobile.your_area'); ?></label>
 				<input type="text" name="town" value="<?php echo $town ?>"></div>
 				
-				<div><label for="distance">Distance</label>
+				<div><label for="distance"><?php echo Kohana::lang('mobile.distance'); ?></label>
 				<select name="distance" id="distance">
 					<?php
 					$distance_options = array('0.5', '1', '2', '3', '7', '10', '20');
@@ -30,7 +30,7 @@
 					}
 					?>
 				</select></div>
-				<div><label for="category">Category</label>
+				<div><label for="category"><?php echo Kohana::lang('ui_main.category'); ?></label>
 				<select class="catlist" name="category_id" id="category_id">
 					<?php 
 						$selected_category = isset($_GET['category_id']) ? $_GET['category_id'] : '0';
@@ -55,7 +55,7 @@
 					} 
 				?>
 				</select></div>
-				<div><label for="order">Order By</label>
+				<div><label for="order"><?php echo Kohana::lang('mobile.order_by'); ?></label>
 				<select name="order" id="order">
 					<?php
 					$order_options = array('distance', 'date', 'verified');
@@ -67,7 +67,7 @@
 					}
 					?>
 				</select>
-				<input class="searchbtn" type="submit" value="Search &rarr;">
+				<input class="searchbtn" type="submit" value="<?php echo Kohana::lang('ui_main.search'); ?> &rarr;">
 				</div>
 			</form>
 <?php } ?>
@@ -105,7 +105,7 @@
 				}
 				else
 				{
-					echo "<li>No Reports Found</li>";
+					echo "<li>".Kohana::lang('mobile.no_reports_found')."</li>";
 				}
 				?>
 			</ul>

@@ -1,24 +1,24 @@
 <div class="block">
-	<h2 class="submit"><a href="<?php echo url::site()."mobile/reports/submit/" ?>">Submit A Report</a></h2>
+	<h2 class="submit"><a href="<?php echo url::site()."mobile/reports/submit/" ?>"><?php echo Kohana::lang('ui_main.submit'); ?></a></h2>
 </div>
 <div class="block">
-	<h2 class="other">Find a Report</h2>
+	<h2 class="other"><?php echo Kohana::lang('mobile.find_a_report'); ?></h2>
 	<div class="collapse shown">
 		<?php
 			echo '<form action="'.url::site().'mobile/reports/search" method="get">';
 		?>
-			<label for="town">Your Area</label>
+			<label for="town"><?php echo Kohana::lang('mobile.your_area'); ?></label>
 				<input type="text" name="town" value="">
-				<input type="submit" value="Search &rarr;">
+				<input type="submit" value="<?php echo Kohana::lang('ui_main.search'); ?> &rarr;">
   		</form>
 		
 	</div>
 </div>
 <div class="block">
-	<h2 class="other"><a href="<?php echo url::site()."mobile/categories/" ?>">Or browse by category</a></h2>
+	<h2 class="other"><a href="<?php echo url::site()."mobile/categories/" ?>"><?php echo Kohana::lang('mobile.browse_by_category'); ?></a></h2>
 </div>
 <div class="block">
-	<h2 class="expand">Recent Reports</h2>
+	<h2 class="expand"><?php echo Kohana::lang('mobile.recent_reports'); ?></h2>
 	<div class="collapse">
 		<ul>
 			<?php
@@ -34,7 +34,7 @@
 	</div>
 </div>
 <div class="block">
-	<h2 class="expand">Related News</h2>
+	<h2 class="expand"><?php echo Kohana::lang('mobile.related_news'); ?></h2>
 	<div class="collapse">
 		<ul>
 			<?php

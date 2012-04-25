@@ -36,7 +36,7 @@ if ($show_map === TRUE) {
 	<div id="container">
 		<?php if(!empty($breadcrumbs)) { ?>
 			<div id="navigation">
-				<?php echo '<a href="'. url::site().'mobile">Home</a>' . $breadcrumbs; ?>
+				<?php echo '<a href="'. url::site().'mobile">'.Kohana::lang('ui_main.home').'</a>' . $breadcrumbs; ?>
 			</div>
 		<?php } ?>
 		<div id="page">
