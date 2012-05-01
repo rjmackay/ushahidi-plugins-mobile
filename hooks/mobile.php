@@ -94,12 +94,12 @@ class mobile {
 
 	public function _add_mobile_tab_bottom()
 	{
-		echo "<li><a href=\"". url::site()."mobile\">". Kohana::lang('mobile.mobile_version') ."</a></li>";
+		echo "<li><a href=\"". url::site('mobile')."\">". Kohana::lang('mobile.mobile_version') ."</a></li>";
 	}
 
 	public function _add_mobile_tab_header()
 	{
-		echo "<li><a href=\"". url::site()."mobile\">". Kohana::lang('mobile.switch_to_mobile_version') ."</a></li>";
+		echo "<li><a href=\"". url::site('mobile')."\">". Kohana::lang('mobile.switch_to_mobile_version') ."</a></li>";
 	}
 
 }
