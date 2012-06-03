@@ -34,7 +34,7 @@
 	</div>
 </div>
 <div class="block">
-	<h2 class="expand"><?php echo Kohana::lang('mobile.related_news'); ?></h2>
+	<h2 class="expand"><?php echo Kohana::lang('mobile.recent_news'); ?></h2>
 	<div class="collapse">
 		<ul>
 			<?php
