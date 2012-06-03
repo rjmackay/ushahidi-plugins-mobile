@@ -23,5 +23,5 @@
 </div>
 <div style="clear:both;"></div>
 <a href="http://maps.google.com/?t=map&q=<?php echo $incident->location->latitude; ?>,<?php echo $incident->location->longitude; ?>">
-    <img id="staticmap" src="http://maps.google.com/maps/api/staticmap?markers=<?php echo $incident->location->latitude; ?>,<?php echo $incident->location->longitude; ?>&zoom=13&maptype=road&sensor=false&size=128x128" />
+    <img id="staticmap" src="http://maps.google.com/maps/api/staticmap?markers=<?php echo $incident->location->latitude; ?>,<?php echo $incident->location->longitude; ?>&zoom=13&maptype=hybrid&sensor=false&size=128x128" />
 </a>
