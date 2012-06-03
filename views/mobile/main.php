@@ -15,7 +15,7 @@
 	</div>
 </div>
 <div class="block">
-	<h2 class="other"><a href="<?php echo url::site()."mobile/categories/" ?>"><?php echo Kohana::lang('mobile.browse_by_category'); ?></a></h2>
+	<h2 class="other"><a href="<?php echo url::site("mobile/categories/") ?>"><?php echo Kohana::lang('mobile.browse_by_category'); ?></a></h2>
 </div>
 <div class="block">
 	<h2 class="expand"><?php echo Kohana::lang('mobile.recent_reports'); ?></h2>
@@ -26,7 +26,7 @@
 			{
 				$incident_date = $incident->incident_date;
 				$incident_date = date('H:i M d', strtotime($incident->incident_date));
-				echo "<li><strong><a href=\"".url::site()."mobile/reports/view/".$incident->id."\">".$incident->incident_title."</a></strong>";
+				echo "<li><strong><a href=\"".url::site("mobile/reports/view/".$incident->id)."\">".$incident->incident_title."</a></strong>";
 				echo "&nbsp;&nbsp;<i>$incident_date</i></li>";
 			}
 			?>

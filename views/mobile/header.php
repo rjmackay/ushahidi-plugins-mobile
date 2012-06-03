@@ -6,14 +6,14 @@
 <title><?php echo $site_name; ?></title>
 <?php
 echo plugin::render('stylesheet');
-echo html::script("http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js");
+echo html::script("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js");
 echo html::script("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js");
-echo html::stylesheet("http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css");
+echo html::stylesheet("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css");
 echo plugin::render('javascript');
 
 if ($show_map === TRUE)
 {
-	echo "\n<script type=\"text/javascript\" src=\"http://maps.google.com/maps/api/js?sensor=false\"></script>\n";
+	echo html::script("https://maps.google.com/maps/api/js?sensor=false");
 }
 ?>
 <script type="text/javascript">
