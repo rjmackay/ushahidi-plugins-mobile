@@ -105,7 +105,14 @@ print (!$error_description) ? '' : "<li>" . $error_description . "</li>";
 					$selected_categories = (!empty($form['incident_category']) AND is_array($form['incident_category'])) ? $selected_categories = $form['incident_category'] : array();
 
 					$columns = 2;
-					echo category::tree($categories, $selected_categories, 'incident_category', $columns);
+					if (Kohana::config('settings.ushahidi_version') >= 2.4)
+					{
+						echo category::tree($categories, TRUE, $selected_categories, 'incident_category', $columns);
+					}
+					else
+					{
+						echo category::tree($categories, $selected_categories, 'incident_category', $columns);
+					}
 				?>
 			</div>
 		</div>
