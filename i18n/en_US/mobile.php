@@ -16,4 +16,5 @@ $lang = array
 	'view_full_website' => 'View Full Website',
 	'back_to_homepage' => 'Back to the homepage',
 	'location_name' => 'Location Name',
+	'select_location' => 'Select A Location from the Drop-Down',
 );

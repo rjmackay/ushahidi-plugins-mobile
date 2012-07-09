@@ -155,7 +155,7 @@ div#page{
 		margin-left: 10px;
 		display:block;
 		float:left;
-		width:65px;
+		width:75px;
 		margin-top:5px;
 		font-size: 14px;
 	}
@@ -166,6 +166,9 @@ div#page{
 	.report_list .filter .catlist{
 		width:220px;
 		margin-left:2px;
+	}
+	.report_list .filter .filter-row{
+		clear: both;
 	}
 
 /* Report View Page */

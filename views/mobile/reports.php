@@ -15,10 +15,10 @@
 		<div class="other filter">
 <?php if (!empty($filter)) { ?>
 			<form action=<?php echo url::site() . '/mobile/reports/search' ?> method="get" accept-charset="utf-8">
-				<div><label for="town"><?php echo Kohana::lang('mobile.your_area'); ?></label>
+				<div class="filter-row"><label for="town"><?php echo Kohana::lang('mobile.your_area'); ?></label>
 				<input type="text" name="town" value="<?php echo $town ?>"></div>
 				
-				<div><label for="distance"><?php echo Kohana::lang('mobile.distance'); ?></label>
+				<div class="filter-row"><label for="distance"><?php echo Kohana::lang('mobile.distance'); ?></label>
 				<select name="distance" id="distance">
 					<?php
 					$distance_options = array('0.5', '1', '2', '3', '7', '10', '20');
@@ -30,35 +30,34 @@
 					}
 					?>
 				</select></div>
-				<div><label for="category"><?php echo Kohana::lang('ui_main.category'); ?></label>
+				<div class="filter-row"><label for="category"><?php echo Kohana::lang('ui_main.category'); ?></label>
 				<select class="catlist" name="category_id" id="category_id">
 					<?php 
 						$selected_category = isset($_GET['category_id']) ? $_GET['category_id'] : '0';
 						
 						echo '<option value="0"';
 						echo 0 == $selected_category ? 'selected' : '';
-						echo '>All categories</option>';
+						echo '>'.Kohana::lang('ui_main.all_categories').'</option>';
 						
 						foreach ($categories as $category) {
+							echo '<option value="' . $category->id . '"';
+							echo $category->id == $selected_category ? 'selected' : '';
+							echo '>' . $category->category_title . '</option>';
 							
-						echo '<option value="' . $category->id . '"';
-						echo $category->id == $selected_category ? 'selected' : '';
-						echo '>' . $category->category_title . '</option>';
-						
-						if ($category->children->count() > 0) {
-							foreach ($category->children as $child) {
-								echo '<option value="' . $child->id . '"';
-								echo $child->id == $selected_category ? 'selected' : '';
-								echo '>--' . $child->category_title . '</option>';
+							if ($category->children->count() > 0) {
+								foreach ($category->children as $child) {
+									echo '<option value="' . $child->id . '"';
+									echo $child->id == $selected_category ? 'selected' : '';
+									echo '>--' . $child->category_title . '</option>';
+								}
 							}
-						}
-					} 
+						} 
 				?>
 				</select></div>
-				<div><label for="order"><?php echo Kohana::lang('mobile.order_by'); ?></label>
+				<div class="filter-row"><label for="order"><?php echo Kohana::lang('mobile.order_by'); ?></label>
 				<select name="order" id="order">
 					<?php
-					$order_options = array('distance', 'date', 'verified');
+					$order_options = array('distance' => Kohana::lang('mobile.distance'), 'date' => Kohana::lang('ui_main.date'), 'verified' => Kohana::lang('ui_main.verified'));
 					$selected_distance = isset($_GET['order']) ? $_GET['order'] : 'distance';
 					foreach($order_options as $option){
 						echo '<option value="' . $option . '"';
